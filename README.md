@@ -1,4 +1,4 @@
-# Dr Doctor Technical Challenge Overview
+# DrDoctor Technical Challenge Overview
 
 This SPA was developed in Vue and styled with Bootstrap.   
 
@@ -18,6 +18,6 @@ Load the project from your browser using your localhost: http://localhost:8080/
 
 # Acknowledgements
 
-Thanks to Dr Doctor for giving me the opportunity to do the technial challenge.<br><br>
-The Logo used for this test was supplied by Dr Doctor to be used only for this project.
+Thanks to DrDoctor for giving me the opportunity to do the technial challenge.<br><br>
+The Logo used for this test was supplied by DrDoctor to be used only for this project.
 
