@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DrDoctor Technical Challenge Developed By Alnoor Verjee</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="container d-flex justify-content-center align-items-center">
+			<img src="assets/logo.png" alt="" srcset="">
+		</div>
+		<div id="app" class="d-flex justify-content-center align-items-center" v-cloak>
+			<div class="container" v-show="showForm">
+				<div class="form-group">
+					<label for="lastname">Last Name</label><br>
+					<input id="lastname" type=text v-model="lastname">
+				</div>
+				<div class="form-group">
+					<label for="dob">Date Of Birth</label><br>
+					<input id="dob" type=date v-model="dob">
+				</div>
+				<div class="form-group">
+					<label for="postcode">Postcode</label><br>
+					<input id="postcode" type=text v-model="postcode">
+				</div>
+				<div>
+					<button class="btn-success" type=submit @click="submit(lastname, dob, postcode)">
+						Log In
+					</button>
+				</div>
+				<div class="text-danger mt-2">{{ error }}</div>
+			</div>
+
+			<div class="container" v-show="showTable">
+				<div class="table-label">Please select a contact detail where we will send you a one-time code for verification:</div>
+				<div class="text-danger">{{ error }}</div>
+				<table class="table">
+					<tbody v-for="result in results[0]">
+						<tr>
+							<td>{{ result }}</td>
+							<td>
+								<button class="btn-success" @click="selectContact()">Select</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="container" v-show="showBox">
+				<span v-show="showBox">Please enter in the one-time code sent to the contact detail you provided:</span><br><br>
+				<div class="form-group">
+					<input id="authcode" v-model="authcode">
+					<br><br>
+					<button class="btn-success" @click="authenticate(authcode)">Submit</button>
+				</div>
+				<div class="text-danger mt-2">{{ error }}</div>
+			</div>
+
+			<div class="container" v-show="showWelcome">
+				<h2 class="text-center">Welcome!</h2>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

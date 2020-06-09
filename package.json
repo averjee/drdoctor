@@ -1,0 +1,15 @@
+{
+  "name": "drdoctor",
+  "version": "1.0.0",
+  "description": "https://github.com/averjee/drdoctor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/averjee/drdoctor"
+  },
+  "author": "Alnoor Verjee",
+  "license": "MIT",
+  "homepage": "https://github.com/averjee/drdoctor",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}

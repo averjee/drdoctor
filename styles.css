@@ -1,0 +1,13 @@
+* {
+	font-size: 22px;
+	font-family: courier,arial,helvetica !important;
+}
+
+.table-label {
+	margin-bottom: 20px;
+}
+
+.container {
+	width: 400px;
+	height: 300px;
+}
